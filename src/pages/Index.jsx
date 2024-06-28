@@ -1,13 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "sonner"; // Import the toast function
 
 const Index = () => {
-  const { toast } = useToast();
-
   const handleClick = () => {
-    toast({
-      title: "Hello, World!",
+    toast("Hello, World!", {
       description: "This is your bare-bones web application.",
     });
   };
